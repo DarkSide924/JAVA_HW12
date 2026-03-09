@@ -15,7 +15,7 @@ public class Epic extends Task {
     @Override
     public boolean matches(String query) {
         for (String subtusk : subtusk) {
-            if (subtusk.contains(query)){
+            if (subtusk.contains(query)) {
                 return true;
             }
         }

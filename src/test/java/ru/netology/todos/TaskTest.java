@@ -7,18 +7,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TaskTest {
     @Test
-    public void testSimpleTaskMatchesSucces () {
+    public void testSimpleTaskMatchesSucces() {
         SimpleTask task = new SimpleTask(1, "Сделать домашку");
         Assertions.assertTrue(task.matches("домашку"));
     }
+
     @Test
-    public void testSimpleTaskMatchesFailed () {
+    public void testSimpleTaskMatchesFailed() {
         SimpleTask task = new SimpleTask(1, "Сделать домашку");
         Assertions.assertFalse(task.matches("хлеб"));
     }
 
     @Test
-    public void testEpicMatchesSucces () {
+    public void testEpicMatchesSucces() {
         String[] subtasks = {"Купить молоко", "Погулять с собакой", "Сделать домашнее задание"};
         Epic epic = new Epic(22, subtasks);
         Assertions.assertTrue(epic.matches("молоко"));
